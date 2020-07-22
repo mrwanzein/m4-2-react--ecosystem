@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 import About from './About';
 import Home from './Home';
+import ItemDetails from './ItemDetails';
 
 import { items } from '../data';
 
@@ -31,7 +32,7 @@ const App = (props) => {
               </Route>
               
               <Route exact path='/items/:itemId'>
-                Single item
+                <ItemDetails />
               </Route>
           </Switch>
       </div>

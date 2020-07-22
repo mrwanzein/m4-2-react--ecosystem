@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Grid = styled.div`
     display: grid;
@@ -21,6 +22,11 @@ const FruitImg = styled.img`
     width: 200px;
     height: 200px;
     border-radius: 10px;
+    transition: all 600ms ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 const ListingGrid = (props) => {
@@ -29,7 +35,9 @@ const ListingGrid = (props) => {
             {props.listOfFruits.map(fruit => {
                 return (
                     <FruitDiv key={fruit.id}>
+                    <Link to={`/items/${fruit.name}`}>
                         <FruitImg src={fruit.imageSrc} alt="Yummy fruit"/>
+                    </Link>
                         <p>{fruit.name}</p>
                         <p>{fruit.latinName}</p>
                     </FruitDiv>
