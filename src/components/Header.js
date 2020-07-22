@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Nav = styled.nav`
@@ -17,6 +17,7 @@ const Nav = styled.nav`
     a {
         font-size: 1.2em;
         margin: 0 15px;
+        padding-bottom: 5px;
     }
 `;
 
@@ -27,8 +28,8 @@ const Header = (props) => {
                 <h1>Fruit Emporium</h1>
             </div>
             <div>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
+                <NavLink exact to="/" activeClassName="nav-selected">Home</NavLink >
+                <NavLink exact to="/about" activeClassName="nav-selected">About</NavLink >
             </div>
         </Nav>
     );

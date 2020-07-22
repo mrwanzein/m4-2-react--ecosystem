@@ -14,6 +14,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Raleway', 'sans-serif';
   }
+
+  .nav-selected {
+    border-bottom: 2px solid red;
+    color: red;
+  }
 `;
 
 const App = (props) => {
