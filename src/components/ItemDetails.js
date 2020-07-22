@@ -44,8 +44,7 @@ const SingleFruit = styled.div`
 const ItemDetails = () => {
     const { itemId } = useParams();
     const rightFruit = Object.values(items).find(fruits => fruits.name === itemId);
-    const size = Object.keys(sellers).length;
-    const seller = Object.values(sellers)[Math.floor(Math.random() * size)];
+    const seller = Object.values(sellers).find(sellers => sellers.id === rightFruit.sellerId);
     
     return (
       <SingleFruit>
